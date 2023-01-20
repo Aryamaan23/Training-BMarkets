@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classwork</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+
+        table,tr,th,td
+        {
+        
+            border: 5 px solid black;
+            border-collapse: collapse;
+        }
+       
+        .lo1
+        {
+            color: aqua;
+        }
+        #t2
+        {
+           border: 5 px solid yellowgreen;
+           border-collapse: collapse;
+           color: yellowgreen;
+           width: 50%;
+           margin-left: auto;
+           margin-right: auto;
+
+        }
+        #tab3
+        {
+            border: 5px solid yellowgreen;
+            color: blue;
+            border-collapse: collapse;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #i2
+        {
+            color: yellowgreen;
+        }
+        .para
+        {
+            color: green;
+        }
+    </style>
+    <script>
+        src="https://www.apple.com"
+    </script>
+</head>
+<body style="background-color:#ddfdfd">
+    <h1 style="font-size: 60px;color: aliceblue;">HTML Stuffs!!</h1>
+    <p title="I'm a tootltip">This is a paragraph</p>
+    <p id="k1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quo quis blanditiis dolore nisi vitae ipsa, libero voluptatibus alias quaerat dolorum temporibus sit accusamus autem repellat quia quae quam! Dolore.</p>
+    <br>
+    <p class="lo1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos voluptas laborum earum maxime esse alias et voluptatum blanditiis corporis. Ex quis perferendis sunt adipisci necessitatibus molestias animi expedita iusto enim?</p>
+
+    <p>X <sup>2</sup> + 2Y = Z</p>
+    <p>H <sub>2</sub>+ O = H <sub>2</sub>O</p>
+
+    <!--- Html tags aree not case sensititive-->
+    <!-- Html elements can have attributes. They provide additional info about attributes-->
+
+    <a href="https://www.apple.com">Visit the apple websiteß</a>
+    <img src="https://www.w3schools.com/images/img_girl.jpg" alt="">
+    <ol>
+        <li>Tea</li>
+        <li>Coffee</li>
+        <li>Soda</li>
+    </ol>
+    <ul style="list-style-type:lower-roman;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Soda</li>
+
+    </ul>
+    <hr>
+    <table border="3">
+        <tr>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Steve</td>
+            <td>Carpenter</td>
+            <td>30</td>
+        </tr>
+    </table>
+    <hr>
+    <p>Here is a quote from WWF's website:</p>
+
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+</blockquote>
+
+<!--Row span or Column Span-->
+<!--Allow a single table cell to span height of one or more cell-->
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <td>Rohit</td>
+    </tr>
+    <tr>
+        <th rowspan="2">Phone</th>
+        <td>555-1234</td>
+    </tr>
+    <tr>
+        <td>555-9246</td>
+    </tr>
+
+<br>
+    <table border="1">
+        <tr>
+            <th colspan="2">Phone</th>
+        </tr>
+        <tr>
+            
+            <td>555-1234</td>
+        </tr>
+        <tr>
+            <td>555-9246</td>
+        </tr>
+
+</table>
+
+<table  border="1">
+    <tr>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>48</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>57</td>
+    </tr>
+</table>
+
+<hr>
+
+<h2 id="A1" style="color: yellowgreen;">Life Expectancy by current Age</h1>
+    <table id="t2" border="1">
+        <tr>
+            <th colspan="2">65</th>
+            <th colspan="2">40</th>
+            <th colspan="2">20</th>
+        </tr>
+        <tr>
+            <th >Men</th>
+            <th >Women</th>
+            <th >Men</th>
+            <th >Women</th>
+            <th >Men</th>
+            <th>Women</th>
+        </tr>
+        <tr>
+            <td>82</td>
+            <td>85</td>
+            <td>78</td>
+            <td>82</td>
+            <td>77</td>
+            <td>81</td>
+        </tr>
+    </table>
+
+<hr>
+
+<h2 id="i2">Invoice</h2>
+<table border="3" id="tab3">
+    <tr>
+        <th>Item/Desc</th>
+        <th>Qty</th>
+        <th>@</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+    <td>PaperClips(box)</td>
+    <td>100</td>
+    <td>1.15</td>
+    <td>115.00</td>
+</tr>
+<tr>
+    <td>Paper(Case)</td>
+    <td>10</td>
+    <td>45:99</td>
+    <td>459.90</td>
+    </tr>
+    <tr>
+        <td >Wastepaper Baskets</td>
+        <td >2</td>
+        <td >17.99</td>
+        <td >35.88</td>
+    </tr>
+    <tr bgcolor="green">
+        <td colspan="3">Subtotal</td>
+        <td>610.6</td>
+    </tr>
+    <tr bgcolor="red">
+        <td colspan="2">Tax</td>
+        <td>7%</td>
+        <td>42.76</td>
+    </tr>
+    <tr bgcolor="yellow">
+        <td colspan="3">Total</td>
+        <td>653.64</td>
+    </tr>
+</table>
+
+<hr>
+
+<h3>Geolocator</h3>
+
+<button  onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<hr>
+
+<h3>Routing through HTML pages</h3>
+<button><a href="test24.html">Click on this button to go to test </a></button>
+
+<hr>
+<!--
+    target attribute values
+    _blank -> open linked doc in new window or tab
+    _self -> open in same frame(default)
+    _parent -> open in parent frame
+    _top ->opens in full body of the window
+    framename ->open in the linked doc in the named iframe
+-->
+
+
+<form action="action_page.php"  id="f1">
+    <div class="container">
+      <h2>Sign Up</h2>
+      <p style="font-size: large;">Please fill in this form to create an account.</p>
+      <hr>
+      <table>
+        <tr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+        </tr>
+
+        <br>
+      <tr>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      </tr>
+       <br>
+      <tr>
+  
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      </tr>
+  
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+  
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+  
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+    </table>
+  </form>
+
+
+  <hr>
+
+  <img src="https://www.motorbeam.com/wp-content/uploads/Hyperion-XP1-672x414.jpg" alt="Car Image" width="300" height="200">
+
+<hr>
+ <!-- <iframeset cols="20%,50%">
+    <iframe src="test24.html">
+    <iframeset  rows="30%,30%">
+        <iframe src="test25.html">
+    <iframeset>
+        <iframe src="test24.html">
+    </iframeset>
+    </iframeset>
+  </iframeset>
+  
+  <hr>-->
+ <h1>Hi there!</h1>
+ <p class="para">
+    Hi how are you?
+ </p>
+ <p class="para">
+    I am leaving CSS!
+ </p>
+
+ <!-- Entities and Symbols-->
+<p>Used for greater than: 2 &gt; 1</p>
+<p>Used for less than: 2 &lt; 3</p>
+<p>Used for cent symbol: &cent;</p>
+<p>Used for copy right: &copy;</p>
+<p>Used for registered: &reg;</p>
+<p>Used for spades: &spades;</p>
+<p>Used for clubs; &clubs;</p>
+<p>Used for hearts: &hearts;</p>
+<p>Used for diamonds: &diamondsuit;</p>
+
+<p>All Rights Reserved &copy;</p>
+<p>TOEFL<sup>&reg;</sup></p>
+   
+
+<form action="">
+<input type="text" placeholder="First Name">
+<br>
+<input type="text" placeholder="Last Name">
+<br>
+<p><input type="radio" name="gender" id="">Male</p>
+<p><input type="radio" name="gender" id="">Female</p>
+
+<br>
+
+<input type="number" placeholder="Enter phone no">
+<br>
+<input type="email" placeholder="Enter email">
+<br>
+<input type="password" placeholder="Enter password">
+<br>
+<input type="reset">
+
+<select name="movies" id="">
+    <option value="movies">Hitman</option>
+    <option value="Iron Man">Iron Man</option>
+</select>
+
+<br>
+<!-- Data list-->
+<input list="Movies"/>
+<datalist id="Movies">
+    <option value="Hitman">Hitman</option>
+    <option value="Ironman">Ironman</option>
+</datalist>
+<br>
+<button type="button">Click here</button>
+<br>
+<input type="Submit" value="Submit" onclick="alert('Hi this is Arya')">
+<input type="color"/>
+<input type="file"/>
+<br>
+<input type="search" placeholder="search items"/>
+<br>
+<input type="checkbox" />
+<input type="url"/>
+
+</form>
+<div>
+    block
+</div>
+<span>
+    span is used for styling!
+</span>
+
+<br>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<br>
+<video src="big_buck_bunny_720p_10mb.mp4" width="400" controls type="video/mp4"></video>
+<br>
+<audio src="relaxed-vlog-131746.mp3" controls></audio>
+</body>
+</html>
