@@ -66,3 +66,13 @@ try:
 except MyException as me:
     print(me)
 
+#Logging the exception
+'''
+Debug levels-
+critical 50
+error 40
+warning 30
+info 20
+
+
+'''
