@@ -40,3 +40,29 @@ except ZeroDivisionError as ze:
     print(ze)
 
 '''
+
+#Raise Excepition
+'''
+x = -1
+
+if x < 0:
+  raise Exception("Sorry, no numbers below zero")
+
+'''
+class MyException(Exception):
+    def __init__(self,arg):
+        self.arg=arg
+
+
+def check(d):
+    for k,v in d.items():
+        print(k,v)
+        if(v<2000.0):
+            raise MyException('Balance is 0')
+
+b={'Raj':4000,'Ramesh':3000,'Mahesh':1000,'Ram':400}
+try:
+    check(b)
+except MyException as me:
+    print(me)
+
