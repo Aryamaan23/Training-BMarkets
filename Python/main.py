@@ -420,7 +420,7 @@ print(Convert(lst))
 
 
 #Importing file as a module
-import demo as d
+import Python.demo as d
 d.convert({
   "name": "John",
   "age": 30,
