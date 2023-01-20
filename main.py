@@ -670,4 +670,4 @@ def Convert(string):
 records = Convert(s)
 print(records[1])
 
-
+print('Python is cool!')
