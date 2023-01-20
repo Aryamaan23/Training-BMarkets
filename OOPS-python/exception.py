@@ -73,6 +73,7 @@ critical 50
 error 40
 warning 30
 info 20
-
-
 '''
+
+import logging
+logging.basicConfig()
