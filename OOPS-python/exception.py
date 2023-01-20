@@ -76,4 +76,14 @@ info 20
 '''
 
 import logging
-logging.basicConfig()
+logging.basicConfig(filename='file.log',level=logging.DEBUG)#It is used for making the log file
+logger=logging.getLogger("__name__")
+
+try:
+    a=int(input('Enter  numbers'))
+    b=int(input('Enter  numbers'))
+    c=a/b
+    logger.info('Done')#It is used when successful evaluation of the program is done
+
+except Exception as err:
+    logger.exception(err)

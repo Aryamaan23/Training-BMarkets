@@ -1,0 +1,12 @@
+ERROR:__name__:Error
+Traceback (most recent call last):
+  File "/Users/aryamaanpandey/Training-BMarkets/OOPS-python/exception.py", line 83, in <module>
+    a=int(input('Enter  numbers'))
+ValueError: invalid literal for int() with base 10: 'adad'
+INFO:__name__:Done
+INFO:__name__:Done
+ERROR:__name__:invalid literal for int() with base 10: 'adad'
+Traceback (most recent call last):
+  File "/Users/aryamaanpandey/Training-BMarkets/OOPS-python/exception.py", line 84, in <module>
+    b=int(input('Enter  numbers'))
+ValueError: invalid literal for int() with base 10: 'adad'
