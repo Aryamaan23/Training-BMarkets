@@ -192,3 +192,47 @@ l=txt.split()
 prem=combinations(l,2)
 for i in list(prem):
     print(i)
+
+
+print(*'Aryamaan')#It is used for splitting the letters
+l=[*[12,13,14,15]]
+print(l)
+
+text='My name is Aryamaan'
+text=text.split()
+n=2
+print(list(zip(*[text[i:] for i in range(n)])))
+
+l4=[1,2,3,4,5,[1,2,3],(1,2,3)]
+l5=l4.copy()
+print(l5[-1] is l4[-1])
+print(l5[-2] is l4[-2])
+print(l5[-3] is l4[-3])
+
+str='Python29@38496'
+l=len(str)
+s=0
+c=0
+for i in range(0,l):
+    if(str[i].isdigit()):
+        s=int(s+int(str[i]))
+        c+=1
+
+avg=s/c
+print(avg)
+print(s)
+
+
+dict1 = {'Ten': 10, 'Twenty': 20,'Thirty':30}
+dict2 = {'Forty': 40, 'Fifty': 50,'Sixty':60}
+ 
+def Merge(dict1, dict2):
+    return(dict2.update(dict1))
+
+
+# This returns None
+print(Merge(dict1, dict2))
+ 
+# changes made in dict2
+print(dict2)
+    
