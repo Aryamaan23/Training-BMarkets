@@ -32,3 +32,39 @@ for i in count(5):
     print(i)
 
 
+#Decorators
+def my_decorator(func):
+    def inner(n1,n2):
+        n=10
+        f=func(n1,n2)
+        return 10+f
+
+    #Here def inner is closure
+
+    return inner
+
+"""
+#Closure means function within function
+@my_decorator
+def func(n1,n2):
+    return n1+n2
+
+
+n1=int(input('Enter a number'))
+n2=int(input('Enter second number'))
+print(func(n1,n2))
+"""
+
+def doubleval(myfunc):
+    def inner(a,b):
+        f=myfunc(a,b)
+        return f*2
+    return inner
+
+@doubleval
+@my_decorator
+def my_fun(a,b):
+    return a**b
+
+print(my_fun(10,2))
+
