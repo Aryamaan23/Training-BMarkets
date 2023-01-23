@@ -50,6 +50,7 @@ def main():
     d1: dict = {}
     file_in = re.sub('\s+', ' ', file_in)
     words: list = list(map(lambda x: x.lower(), file_in.strip().split(' ')))
+    print(words)
     # Iterating over the list of words
     for word in words:
         if word in d1.keys():
@@ -70,3 +71,42 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+f=open('file.txt','r')
+data=f.read().lower()
+data=data.split()
+bow=dict()
+for word in data:
+    count=data.count(word)
+    li=bow.setdefault(count,set())
+    li.add(word)
+
+print(li)
+
+
+#Shallow copy concept
+def fun(li):
+    li2=li.copy()
+    li2.append(1000)
+    print(li2)
+    return li2
+
+
+li1=[1,2,3]
+li3=fun(li1)
+print(li1)
+print(li3)
+
+
+import copy
+def fun(li):
+    li2=copy.deepcopy(li)
+    li2[-1].append('D')
+    print(li2)
+    return li2
+
+
+li1=[1,2,3,['A','B']]
+li3=fun(li1)
+print(li1)
+print(li3)
