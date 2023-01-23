@@ -110,3 +110,85 @@ li1=[1,2,3,['A','B']]
 li3=fun(li1)
 print(li1)
 print(li3)
+
+li1=[1,2,3,4]
+li2=li1
+li3=li2[:]
+
+print(li1==li2)
+print(li1 is li2)
+print(li3==li1)
+print(li3 is li2)
+print(li3 is li1)
+print(li3 is li2)
+
+
+l = ['Python','C', 'Java', 'VC++']
+a=sorted(l, key=len)
+print(a)
+
+
+
+
+import glob
+import os
+
+name_of_dir = '/Users/aryamaanpandey'
+
+# Storing list of all files (file paths)
+# in the given directory in list_of_files
+list_of_files = filter( os.path.isfile,
+						glob.glob(name_of_dir + '*') )
+
+# Sort list of files in directory by size
+list_of_files = sorted( list_of_files,
+						key = lambda x: os.stat(x).st_size)
+
+# Iterate over sorted list of file names
+# and print them along with size one by one
+for path_of_file in list_of_files:
+	size_of_file = os.stat(path_of_file).st_size
+	print(size_of_file, ' -->', path_of_file)
+
+
+lis=[(1,2,3),(4,2,1),(3,4,5),(2,3,4)]
+print(sorted(lis,key=lambda x: x[0]))
+
+
+
+import os
+path='/Users/aryamaanpandey/Desktop/Python-Practice/'
+lis=os.listdir(path)
+print(sorted(lis,key=lambda x:os.path.getsize(path+x)))
+
+"""
+
+import os
+path = r"/Users/aryamaanpandey/Desktop/Python-Practice"
+file_list = os.listdir(path)
+temp =""
+file_dict = dict()
+for fl in file_list:
+ temp = path + "/" + fl
+ file_size = os.path.getsize(temp)
+ file_dict[fl] = file_size
+ temp = ""
+sorted_file_dict = sorted(file_dict.items(), key=lambda kv: kv[1])
+print(sorted_file_dict)
+
+"""
+
+txt='Python is easy to learn. It reduces development time'
+n = int(input())
+res=[]
+lis = txt.split()
+print(lis)
+for pos in range(len(lis)-n+1):
+ res.append(lis[pos:pos+n])
+print(res)
+
+from itertools import combinations
+l=txt.split()
+prem=combinations(l,2)
+for i in list(prem):
+    print(i)
