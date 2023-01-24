@@ -21,6 +21,7 @@ Writing into the browser console, using console.log().
     <button onclick="myfunction()">Click Here</button>
     <p id="demo"></p>
     <p id="demo2"></p>
+    <p id="demo3">JavaScript can change the style of an HTML element.</p>
 
     <script>
     function myfunction(){
@@ -32,9 +33,15 @@ Writing into the browser console, using console.log().
         }
     }
     document.getElementById("demo2").innerHTML = 5 + 6;
+    document.write(12+11)
 
     
  </script>
+ <br>
+ <button type="button" onclick="document.getElementById('demo3').style.fontSize='35px'">Click Me!</button>
+ <button type="button" onclick="document.getElementById('demo3').style.display='none'">Click Me!</button>
+ <button type="button" onclick="document.getElementById('demo3').style.display='block'">Click Me!</button>
+
     
     
 </body>
