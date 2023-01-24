@@ -105,8 +105,84 @@ console.log(points);
 points.sort(function(){return 0.5 - Math.random()});
 console.log(points);
 
+//Fisher Yates Method
+const points2 = [40, 100, 1, 5, 25, 10];
 
+for (let i = points2.length -1; i > 0; i--) {
+  let j = Math.floor(Math.random() * (i+1));
+  let k = points2[i];
+  points2[i] = points2[j];
+  points2[j] = k;
+}
 
+console.log(points2)
+
+const numeric=[1,2,3,4,5,6,-2,-3,43,434,890,34343,22,23];
+
+//Method 1 for max
+function myArraymax(arr)
+{
+  console.log(Math.max.apply(null,arr));
+}
+
+//Method 2 for max
+function myArraymax2(arr)
+{
+  let len=arr.length;
+  let max=-Infinity;
+  while(len--)
+  {
+    if(arr[len]>max)
+    {
+      max=arr[len];
+    }
+  }
+  console.log(max);
+}
+
+//Method 1 for min
+function myArraymin(arr)
+{
+  console.log(Math.min.apply(null,arr));
+}
+
+//Method 2 for min
+function myArraymin2(arr)
+{
+  let len2=arr.length;
+  let min=Infinity;
+  while(len2--)
+  {
+    if(arr[len2]<min)
+    {
+      min=arr[len2];
+    }
+  }
+  console.log(min);
+}
+
+myArraymax(numeric)
+myArraymin(numeric)
+myArraymax2(numeric)
+myArraymin2(numeric)
+
+//Sorting an object
+const carsob = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+carsob.sort(function(a, b){return a.year - b.year});
+console.log(carsob)
+
+carsob.sort(function(a, b){
+  let x = a.type.toLowerCase();
+  let y = b.type.toLowerCase();
+  if (x < y) {return -1;}
+  if (x > y) {return 1;}
+  return 0;
+});
+console.log(carsob);
 </script>
 
 </body>
