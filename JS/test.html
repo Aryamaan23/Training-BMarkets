@@ -183,6 +183,34 @@ carsob.sort(function(a, b){
   return 0;
 });
 console.log(carsob);
+
+const numbers2=[45,4,9,16,25];
+let txt="";
+numbers2.forEach(myFunc);
+function myFunc(value,index,array)
+{
+  txt+=value+"/";
+  
+}
+console.log(txt);
+
+const num=[45,4,9,16,25];
+const uno=num.map(abfunction);
+const over18=num.filter(filt);
+
+function abfunction(value,index,array){
+  return value*2;
+}
+
+function filt(value,index,array)
+{
+  return value >18;
+}
+
+console.log(num);
+console.log(uno);
+console.log(over18);
+
 </script>
 
 </body>
@@ -201,4 +229,12 @@ Splicing and Slicing Arrays
 The splice() method adds new items to an array.
 
 The slice() method slices out a piece of an array.
+
+
+Map method
+The map() method creates a new array by performing a function on each array element.
+
+The map() method does not execute the function for array elements without values.
+
+The map() method does not change the original array.
 -->

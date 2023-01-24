@@ -1,4 +1,4 @@
-function myfunction()   
+function myfunction(arr)   
  {   
-document.write("welcome to Javatpoint");  
+document.write("welcome to Javatpoint",arr);  
          }  
