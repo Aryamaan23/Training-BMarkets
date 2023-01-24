@@ -377,6 +377,38 @@ class Car {
 let myCar = new Car("Ford", 2014);
 console.log(myCar.age());
 
+
+class Emp{
+  static company="Bajaj Markets";
+  constructor(eid,ename,esal){
+    this.eid=eid;
+    this.ename=ename;
+    this.esal=esal;
+  }
+  set emp_id(eid){this.eid=eid;}
+  set emp_name(ename){this.ename=ename;}
+  set emp_sal(esal){this.esal=esal;}
+  get emp_id(){return eid;}
+  get emp_name(){return ename;}
+  get emp_sal(){return esal;}
+  disp()
+  {
+    console.log(this.eid,this.ename,this.esal);
+  }
+  static get_company(){
+    return Emp.cpmpany;
+  }
+}
+
+let e1=new Emp("E01","Aryamaan",500000);
+console.log(e1.disp(),Emp.get_company());
+e1.eid="E02";
+e1.ename="Akshit";
+e1.esal=343400;
+console.log(e1.eid,e1.ename,e1.esal);
+Emp.company="Bajaj Financial Markets";
+console.log(Emp.company);
+
 </script>
 
 <script type="module">
