@@ -8,7 +8,18 @@
 
 <p id="demo"></p>
 <p id="demo2"></p>
-
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p>
 <script>
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 let fLen = fruits.length;
@@ -22,6 +33,10 @@ text += "</ul>";
 document.getElementById("demo").innerHTML = text;
 
 const cars=["Audi","BMW","Mercedes","Rolls Royce"];
+//Pushing the element-Method 1
+cars.push("Ferrari");
+//Pushing the element-Method 2
+cars[cars.length]="Volkswagen"
 let te="<ul>";
 cars.forEach(myfunc);
 te+="</ul>"
@@ -30,7 +45,64 @@ function myfunc(value)
   te+="<li>"+value+"</li>"
 }
 document.getElementById("demo2").innerHTML = te;
+let type=typeof(cars)
+console.log(type)
+console.log(cars instanceof Array);
+document.getElementById("demo3").innerHTML=cars.toString();
+document.getElementById("demo4").innerHTML=cars.join("*");
+// to take out the last element
+document.getElementById("demo5").innerHTML=cars.pop();
+// to take out the first element
+document.getElementById("demo6").innerHTML=cars.shift();
+// to append the element of the first position
+document.getElementById("demo7").innerHTML=cars.unshift();
+
+document.getElementById("demo8").innerHTML =
+"The first fruit is: " + cars[0];
+
+delete cars[0];
+
+document.getElementById("demo9").innerHTML =
+"The first fruit is: " + cars[0];
+
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin", "Morgan"];
+
+const myChildren=myGirls.concat(myBoys);
+const three=myGirls.concat(myBoys,arr3);
+const x=myChildren.concat("Aryamaan");
+document.getElementById("demo10").innerHTML=myGirls;
+document.getElementById("demo11").innerHTML=myBoys;
+document.getElementById("demo12").innerHTML=myChildren;
+document.getElementById("demo13").innerHTML=three;
+document.getElementById("demo14").innerHTML=x;
+fruits.splice(2, 0, "Lemon", "Kiwi");
+console.log(fruits);
+const citrus = fruits.slice(1);
+console.log(citrus);
+const citrus2 = fruits.slice(1, 3);
+console.log(citrus2);
+
+
+
+
 </script>
 
 </body>
 </html>
+
+<!--
+
+  Notes:
+
+ When to Use Arrays. When to use Objects.
+JavaScript does not support associative arrays.
+You should use objects when you want the element names to be strings (text).
+You should use arrays when you want the element names to be numbers.
+
+Splicing and Slicing Arrays
+The splice() method adds new items to an array.
+
+The slice() method slices out a piece of an array.
+-->
