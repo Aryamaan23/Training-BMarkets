@@ -409,6 +409,26 @@ console.log(e1.eid,e1.ename,e1.esal);
 Emp.company="Bajaj Financial Markets";
 console.log(Emp.company);
 
+
+class Meetup{
+  constructor(organizer)
+  {
+    this.organizer=organizer;
+  }
+}
+
+//Inheritance
+class TechMeetup extends Meetup{
+  constructor(organizer,techtopic)
+  {
+    super(organizer);
+    this.techtopic=techtopic;
+
+  }
+}
+let js=new TechMeetup("JS Enterprise","Microservices");
+console.log(js.organizer,js.techtopic);
+
 </script>
 
 <script type="module">
