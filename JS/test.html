@@ -277,6 +277,15 @@ for (let x of f) {
   document.getElementById("demo16").innerHTML += x;
 }
 
+const d = new Date();
+//UTC Standard
+console.log(d.toUTCString());
+//ISO Standard
+console.log(d.toISOString());
+//Returns the millisec between the dates 1st Jan 1970 and the specified date
+let msec = Date.parse("March 21, 2012");
+console.log(msec);
+
 </script>
 
 </body>
@@ -303,4 +312,11 @@ The map() method creates a new array by performing a function on each array elem
 The map() method does not execute the function for array elements without values.
 
 The map() method does not change the original array.
+
+
+Date Object
+
+new Date(year, month, ...) creates a date object with a specified date and time.
+
+7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):
 -->
