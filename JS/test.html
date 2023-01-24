@@ -20,6 +20,9 @@
 <p id="demo12"></p>
 <p id="demo13"></p>
 <p id="demo14"></p>
+<br>
+<p id="demo15"></p>
+<p id="demo16"></p>
 <script>
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 let fLen = fruits.length;
@@ -197,7 +200,14 @@ console.log(txt);
 const num=[45,4,9,16,25];
 const uno=num.map(abfunction);
 const over18=num.filter(filt);
-
+let sum=num.reduce(red);
+let sum2 = num.reduceRight(red2);
+let allOver18 = num.every(allover);
+let someOver18 = num.some(some);
+let position = fruits.indexOf("Apple") + 1;
+let position2 = fruits.lastIndexOf("Apple") + 1;
+let first = num.find(firsta);
+let firstind = num.findIndex(firstii);
 function abfunction(value,index,array){
   return value*2;
 }
@@ -207,9 +217,65 @@ function filt(value,index,array)
   return value >18;
 }
 
+function red(total,value,index,array)
+{
+  return total+value;
+}
+
+function red2(total, value) {
+  return total + value;
+}
+
+function allover(value, index, array){
+  return value > 18;
+}
+
+function some(value,index,array)
+{
+  return value>18;
+}
+
+function firsta(value,index,array)
+{
+  return value>18;
+}
+
+function firstii(value,index,array)
+{
+  return value>18;
+}
+
 console.log(num);
 console.log(uno);
 console.log(over18);
+console.log(sum);
+console.log(sum2);
+console.log(allOver18);
+console.log(someOver18);
+console.log(position);
+console.log(position2);
+console.log(first);
+console.log(firstind);
+
+//Create an array from a string
+console.log(Array.from("ARYAMAAN"));
+
+//Array Keys
+const fruitso=["Banana","Apple","Orange","Mango"];
+const keys=fruitso.keys();
+for(let x of keys)
+{
+  txt+=x+"<br>";
+}
+
+document.getElementById("demo15").innerHTML=txt;
+
+const fruitsiii = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruitsiii.entries();
+
+for (let x of f) {
+  document.getElementById("demo16").innerHTML += x;
+}
 
 </script>
 
