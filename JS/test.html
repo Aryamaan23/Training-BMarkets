@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-</head>
 <body>
 
-  <script>
-    function myFunction() {
-      document.getElementById("demo").innerHTML = "Paragraph changed.";
-    }
-    </script>
+<h2>JavaScript</h2>
 
-<h2>Demo JavaScript in Head</h2>
+<p>The best way to loop through an array is using a standard for loop:</p>
 
-<p id="demo">A Paragraph</p>
-<button type="button" onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("demo").innerHTML = text;
+
+const cars=["Audi","BMW","Mercedes","Rolls Royce"];
+let te="<ul>";
+cars.forEach(myfunc);
+te+="</ul>"
+function myfunc(value)
+{
+  te+="<li>"+value+"</li>"
+}
+document.getElementById("demo2").innerHTML = te;
+</script>
 
 </body>
 </html>
