@@ -298,6 +298,67 @@ console.log(da.getMilliseconds())	//Get millisecond (0-999)
 console.log(da.getTime())
 
 
+//Arrow functions
+let arow = (a, b) => a * b;
+console.log(arow(5,6));
+
+hello=()=> {
+  return "HELLO";
+}
+console.log(hello());
+
+hemlo=(val)=>{
+  return "Heloo " + val;
+}
+
+console.log(hemlo("Aryamaan"));
+
+
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+"use strict";
+let xa = this;
+console.log(xa);
+
+console.log(person.firstName);
+console.log(person.fullName());
+
+const person1={
+  fullName: function(){
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const person2={
+  firstName: "Aryamaan",
+  lastName:"Pandey",
+}
+
+console.log(person1.fullName.call(person2));
+
+
+const person3 = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+
+let fullName = person3.fullName.bind(member);
+console.log(fullName());
 
 </script>
 
@@ -352,4 +413,26 @@ Set Date methods
 //setMonth()	Set the month (0-11)
 //setSeconds()	Set the seconds (0-59)
 //setTime()	Set the time (milliseconds since January 1, 1970)
+
+
+What is this?
+In JavaScript, the this keyword refers to an object.
+
+Which object depends on how this is being invoked (used or called).
+
+The this keyword refers to different objects depending on how it is used:
+
+In an object method, this refers to the object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+Methods like call(), apply(), and bind() can refer this to any object.
+
+
+Precedence	Object
+1	bind()
+2	apply() and call()
+3	Object method
+4	Global scope
 -->
