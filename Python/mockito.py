@@ -39,10 +39,25 @@ assertNotIsInstance(x, y, msg=None)	not isinstance(x, y)
 import unittest
 from calc import Calculator
 
+'''
 class TestCalc(unittest.TestCase):
     def test_case(self):
         c=Calculator(9,6)
         self.assertEqual(c.get_addition(),15,'The sum is wrong')
+
+'''
+
+
+class TestCalc(unittest.TestCase):
+    def setUp(self):
+        self.c=Calculator(9,6)
+        self.f=open('Arya.txt','r')
+    def tearDown(self):
+        self.f.close()
+
+    def test_diff(self):
+        c=Calculator(9,6)
+        self.assertEqual(c.get_difference(),3,'The difference is wrong')
 
 
 if __name__=='__main__':
