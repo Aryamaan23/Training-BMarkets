@@ -10,6 +10,7 @@ assert 1<0 ->AssertionError
 #n=0
 #assert 1<n,"The condition is false"
 
+'''
 x=int(input("Enter a number"))
 try:
     assert x>0, "Wrong number"
@@ -17,6 +18,7 @@ try:
 except AssertionError as ae:
     print(ae)
 
+'''
 
 """
 assertEqual(x, y, msg=None)	x == y
@@ -47,7 +49,7 @@ class TestCalc(unittest.TestCase):
 
 '''
 
-
+'''
 class TestCalc(unittest.TestCase):
     def setUp(self):
         self.c=Calculator(9,6)
@@ -59,6 +61,20 @@ class TestCalc(unittest.TestCase):
         c=Calculator(9,6)
         self.assertEqual(c.get_difference(),3,'The difference is wrong')
 
+'''
+
+
+class TestStrMethods(unittest.TestCase):
+    def test_Upper(self):
+        self.assertEqual("foo".upper(),"FOO")
+
+    def test_isUpper(self):
+        self.assertTrue("FOO".isupper())
+        self.assertFalse("Foo".isupper())
+
+    def test_split(self):
+        s="hello world"
+        self.assertEqual(s.split(),["hello","world"])
 
 if __name__=='__main__':
     unittest.main()
