@@ -64,6 +64,7 @@ class TestCalc(unittest.TestCase):
 '''
 
 
+'''
 class TestStrMethods(unittest.TestCase):
     def test_Upper(self):
         self.assertEqual("foo".upper(),"FOO")
@@ -79,5 +80,59 @@ class TestStrMethods(unittest.TestCase):
 if __name__=='__main__':
     unittest.main()
 
+'''
+
+
+class List:
+    def find(self,data):
+        index = data.index(4)
+        if(index):
+            return index
+        else:
+            return -1
+
+    def insert(self,data):
+        data.insert(3,4)
+        length=len(data)
+        return length
+
+    def extend(self,data):
+        a=[7,8,9,10]
+        for i in range(len(a)):
+            data.append(a[i])
+        return data
+
+
+class Testlistmethods(unittest.TestCase):  
+    """
+    def test_list_int(self):  
+  
+       #  Test that it can sum a list of integers  
+         
+        data = [1, 2, 3,4,5,6]  
+        res = List.find(self,data)  
+        self.assertEqual(res, 4)  
+    
+    def test_list_insert(self):
+        data=[1,2,3,4,5,6]
+        res=List.insert(self,data)
+        self.assertEqual(res,6)
+    """
+
+    def test_list_extend(self):
+        data=[1,2,3,4,5,6]
+        res=List.extend(self,data)
+        self.assertEqual(res,[1,2,3,4,5,6,7,8,9,10])
+
+    
+    """
+    def test_bad_type(self):  
+        data = "Apple"  
+        with self.assertRaises(TypeError):  
+            res = sum(data)  
+    """
+  
+if __name__ == '__main__':  
+    unittest.main()  
 
 #python3 -m unittest -v mockito.py
