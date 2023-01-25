@@ -78,3 +78,6 @@ class TestStrMethods(unittest.TestCase):
 
 if __name__=='__main__':
     unittest.main()
+
+
+#python3 -m unittest -v mockito.py
