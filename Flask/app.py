@@ -1,11 +1,12 @@
 #WSGI
 
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect
 import requests
 app = Flask(__name__)
 import datetime
 import json
-
+import string
+from random import choice
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
@@ -43,6 +44,7 @@ def userlatin(name):
     return f"<h1> Hi {name}! Your user latin name is {username} </h1>"
 
 
+#Method 1
 @app.route("/url_shorten/<urlo>")
 def shorten_url(urlo):
     url = "https://api.apilayer.com/short_url/hash"
@@ -54,11 +56,32 @@ def shorten_url(urlo):
     status_code = response.status_code
     result = response.text
     result=json.loads(result)
-    return f"<h1>Your shortened url is :{result['short_url']}</h1>"
-
-        
+    return f"<h1>Your shortened url is : <a href='{result['short_url']}'>{result['short_url']} </a></h1>"
 
 
+
+"""
+Method 2
+d={}
+
+
+def generate_id(num_of_chars: int):
+    return ''.join(choice(string.ascii_letters+string.digits) for _ in range(num_of_chars))
+
+@app.route('/urlshortener/<url>')
+def short(url):
+    surl=generate_id(4)
+    d[surl]=url
+    if url not in d.values():
+        d[surl]=surl
+    return request.host_url+surl
+
+@app.route('/<id>')
+def url_redirect(id):
+    original_url=d[id]
+    # print(original_url)   
+    return d[id]
+"""
 
 
 if __name__ == '__main__':

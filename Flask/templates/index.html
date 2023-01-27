@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MY URL SHORTENER</title>
+
 </head>
 <body>
-    <h1>Welcome to the World of Flask!</h1>
-    <h3>{{ utc_dt }}</h3>
+    <div>
+        <h1>{{ shortened_url }}</h1>
+        <Form action='/shorten' method="POST">
+            <div>
+                <input type='text' name='long_url'/>
+                <input type='submit'></input>
+            </div>
+        </Form>
+    </div>
 </body>
 </html>
