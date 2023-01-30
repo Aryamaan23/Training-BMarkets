@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is cat breeder</title>
+</head>
+<body>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.breed.label }} {{form.breed}}
+        <br>
+        {{ form.tomcat.label }} {{ form.tomcat }}
+        <br>
+        {{ form.mood.label }} {{ form.mood }}
+        <br>
+        {{ form.food_choice.label }} {{ form.food_choice }}
+        <br>
+        Any feedback
+        <br>
+        {{ form.feedback }}
+        <br>
+        {{ form.submit }}
+    </form>
+
+    
+</body>
+</html>
