@@ -39,7 +39,24 @@ cur.execute('INSERT INTO books (title, author, pages_num, review)'
              'Another great classic!')
             )
 
+
+
+cur.execute("update books set author='Aryamaan Pandey' where author='Leo Tolstoy'")
+
+cur.execute('delete from books where pages_num=489')
+
+#Before fetch we will need to put the 
+cur.execute('Select * from Books;')
+
+#print(cur.fetchall())
+#print(cur.fetchmany())
+#print(cur.fetchone())
+
+print(cur.fetchall())
+print(cur.fetchmany())
+print(cur.fetchone())
 conn.commit()
+
 
 cur.close()
 conn.close()
