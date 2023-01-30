@@ -60,3 +60,7 @@ conn.commit()
 
 cur.close()
 conn.close()
+
+
+#For connecting to MySQL database, we will use mysqlconnector
+#import mysqlconnector as cn
