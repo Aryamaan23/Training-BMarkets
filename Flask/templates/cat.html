@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is cat breeder</title>
+</head>
+<body>
+    <p>
+         {% if cat_breed %}
+            The cat breed entered is {{ cat_breed }}
+            You can update it in the form below:
+
+        {% else %}
+        Please enter your cat breed in the form below
+        {% endif %}
+    </p>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.cat_breed.label }}
+        {{ form.cat_breed }}
+        {{ form.submit() }}
+    </form>
+
+    
+</body>
+</html>

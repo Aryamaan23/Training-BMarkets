@@ -60,8 +60,6 @@ def shorten_url(urlo):
 
 
 
-"""
-Method 2
 d={}
 
 
@@ -74,14 +72,15 @@ def short(url):
     d[surl]=url
     if url not in d.values():
         d[surl]=surl
-    return request.host_url+surl
+    #return request.host_url+surl
+    print(type(d))
+    return d
 
 @app.route('/<id>')
 def url_redirect(id):
     original_url=d[id]
-    # print(original_url)   
-    return d[id]
-"""
+    # print(original_url)
+    return redirect(d[id],code=302)
 
 
 if __name__ == '__main__':
