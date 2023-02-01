@@ -8,6 +8,11 @@
             <i><p>({{ book[3] }} pages)</p></i>
             <p class='review'>{{ book[4] }}</p>
             <i><p>Added {{ book[5] }}</p></i>
+             <!-- <a href="http://127.0.0.1:5500/delete/{{book[0]}}"><button>Delete</button></a> -->
+             <a href=" {{ url_for('delete', ids = book[0])}}"><button>Delete</button></a>
+              <!-- <a href="http://127.0.0.1:5500/delete/{{book[0]}}"><button>Delete</button></a> -->
+            <a href=" {{ url_for('create')}}"><button>Create</button></a>
+        </div>
         </div>
     {% endfor %}
 {% endblock %}

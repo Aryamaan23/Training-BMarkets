@@ -46,5 +46,16 @@ def create():
 
     return render_template('create.html')
 
+@app.route('/delete/<int:ids>')
+def delete(ids):
+    conn = get_db_connection()
+    curr = conn.cursor()
+    t = (ids,)
+    curr.execute('DELETE FROM books WHERE id = %s', (ids,))
+    conn.commit()
+    curr.close()
+    conn.close()
+    return redirect(url_for('index'))
+
 if __name__=='__main__':
     app.run(debug=True,port='2321')
