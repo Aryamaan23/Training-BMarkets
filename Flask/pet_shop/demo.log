@@ -84,3 +84,22 @@ INFO:werkzeug: * Restarting with stat
 2023-02-01 12:54:10,607 INFO werkzeug Thread-10 : 127.0.0.1 - - [01/Feb/2023 12:54:10] "[32mPOST /edit/3 HTTP/1.1[0m" 302 -
 2023-02-01 12:54:10,612 INFO petshop_classingletonmain Thread-11 : Showing Owner Records
 2023-02-01 12:54:10,614 INFO werkzeug Thread-11 : 127.0.0.1 - - [01/Feb/2023 12:54:10] "GET / HTTP/1.1" 200 -
+2023-02-01 13:05:09,477 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-01 13:05:09,477 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-01 13:05:09,478 INFO werkzeug MainThread :  * Restarting with stat
+2023-02-01 13:05:09,683 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-01 13:05:09,688 INFO werkzeug MainThread :  * Debugger PIN: 633-197-354
+2023-02-01 13:08:01,206 INFO werkzeug MainThread :  * Detected change in '/Users/aryamaanpandey/Training-BMarkets/Flask/pet_shop/petshop_classingletonmain.py', reloading
+2023-02-01 13:08:01,226 INFO werkzeug MainThread :  * Restarting with stat
+2023-02-01 13:08:01,473 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-01 13:08:01,477 INFO werkzeug MainThread :  * Debugger PIN: 633-197-354
+2023-02-01 13:08:13,061 INFO petshop_classingletonmain Thread-2 : Showing Owner Records
+2023-02-01 13:08:13,082 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/Feb/2023 13:08:13] "GET / HTTP/1.1" 200 -
+2023-02-01 13:08:14,418 INFO petshop_classingletonmain Thread-3 : Deleting Owner Records
+2023-02-01 13:08:14,419 INFO werkzeug Thread-3 : 127.0.0.1 - - [01/Feb/2023 13:08:14] "[32mGET /delete/4 HTTP/1.1[0m" 302 -
+2023-02-01 13:08:14,424 INFO petshop_classingletonmain Thread-4 : Showing Owner Records
+2023-02-01 13:08:14,426 INFO werkzeug Thread-4 : 127.0.0.1 - - [01/Feb/2023 13:08:14] "GET / HTTP/1.1" 200 -
+2023-02-01 13:08:15,717 INFO werkzeug Thread-5 : 127.0.0.1 - - [01/Feb/2023 13:08:15] "GET /edit/2 HTTP/1.1" 200 -
+
+

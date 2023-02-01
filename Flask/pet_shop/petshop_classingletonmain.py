@@ -96,8 +96,8 @@ def create():
 
 @app.route('/delete/<int:ids>')
 def delete(ids):
-    conn = get_db_connection()
-    curr = conn.cursor()
+    #conn = get_db_connection()
+    #curr = conn.cursor()
     t = (ids,)
     db.delete_row('OwnerSingleton',t)
     app.logger.info('Deleting Owner Records')
