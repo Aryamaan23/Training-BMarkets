@@ -8,13 +8,56 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] =\
-        'sqlite:///' + os.path.join(basedir, 'database.db')
+        'sqlite:///' + os.path.join(basedir, 'database2.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 app.app_context().push()
 Migrate(app,db)
 
+class Pet(db.Model):
+    _tablename_ = 'pet'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text)
+    lname=db.Column(db.Text)
+    toys = db.relationship('Toy',backref = 'pet', lazy = 'dynamic')
+    owner = db.relationship('Owner',backref = 'pet',uselist = False)
+
+    def _init_(self,name):
+        self.name = name
+    def _repr_(self):
+        if self.owner:
+            return f"Pet's name is {self.name} and owner is {self.owner.name}"
+        else:
+            return f"Pet's name is {self.name} and his owner is not assigned yet!"
+    def represent_toys(self):
+        print("These are my toys: ")
+        for toy in self.toys:
+            print(toy.item_name)
+
+
+class Owner(db.Model):
+    _tablename_ = 'owners'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text)
+    pet_id = db.Column(db.Integer, db.ForeignKey('pet.id'))
+    
+    def _init_(self,name,pet_id):
+        self.name= name
+        self.pet_id = pet_id
+
+
+class Toy(db.Model):
+    __tablename__='toys'
+    id=db.Column(db.Integer,primary_key=True)
+    item_name=db.Column(db.Text)
+    pet_id=db.Column(db.Integer,db.ForeignKey('pet.id'))
+
+    def __init__(self,item_name,pet_id):
+        self.item_name=item_name
+        self.pet_id=pet_id
+
+"""
 class Pet(db.Model):
     __tablename__='pets'
     pet_id=db.Column(db.Integer,primary_key=True)
@@ -64,3 +107,5 @@ def handle_cars():
 
 if __name__=="__main__":
     app.run(debug=True,port=4343)
+
+"""
