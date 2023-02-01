@@ -1,0 +1,86 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 633-197-354
+INFO:petshop_classingletonmain:Showing Owner Records
+INFO:werkzeug:127.0.0.1 - - [01/Feb/2023 12:36:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/aryamaanpandey/Training-BMarkets/Flask/pet_shop/petshop_classingletonmain.py', reloading
+INFO:werkzeug: * Restarting with stat
+2023-02-01 12:43:30,953 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-01 12:43:30,961 INFO werkzeug MainThread :  * Debugger PIN: 633-197-354
+2023-02-01 12:43:40,440 INFO petshop_classingletonmain Thread-2 : Showing Owner Records
+2023-02-01 12:43:40,468 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/Feb/2023 12:43:40] "GET / HTTP/1.1" 200 -
+2023-02-01 12:44:09,104 INFO petshop_classingletonmain Thread-3 : Showing Owner Records
+2023-02-01 12:44:09,115 INFO werkzeug Thread-3 : 127.0.0.1 - - [01/Feb/2023 12:44:09] "GET / HTTP/1.1" 200 -
+2023-02-01 12:44:09,633 INFO petshop_classingletonmain Thread-4 : Showing Owner Records
+2023-02-01 12:44:09,635 INFO werkzeug Thread-4 : 127.0.0.1 - - [01/Feb/2023 12:44:09] "GET / HTTP/1.1" 200 -
+2023-02-01 12:44:09,825 INFO petshop_classingletonmain Thread-5 : Showing Owner Records
+2023-02-01 12:44:09,827 INFO werkzeug Thread-5 : 127.0.0.1 - - [01/Feb/2023 12:44:09] "GET / HTTP/1.1" 200 -
+2023-02-01 12:44:10,018 INFO petshop_classingletonmain Thread-6 : Showing Owner Records
+2023-02-01 12:44:10,019 INFO werkzeug Thread-6 : 127.0.0.1 - - [01/Feb/2023 12:44:10] "GET / HTTP/1.1" 200 -
+2023-02-01 12:44:10,218 INFO petshop_classingletonmain Thread-7 : Showing Owner Records
+2023-02-01 12:44:10,219 INFO werkzeug Thread-7 : 127.0.0.1 - - [01/Feb/2023 12:44:10] "GET / HTTP/1.1" 200 -
+2023-02-01 12:44:10,426 INFO petshop_classingletonmain Thread-8 : Showing Owner Records
+2023-02-01 12:44:10,427 INFO werkzeug Thread-8 : 127.0.0.1 - - [01/Feb/2023 12:44:10] "GET / HTTP/1.1" 200 -
+2023-02-01 12:45:39,068 INFO werkzeug MainThread :  * Detected change in '/Users/aryamaanpandey/Training-BMarkets/Flask/pet_shop/petshop_classingletonmain.py', reloading
+INFO:werkzeug: * Restarting with stat
+2023-02-01 12:45:39,572 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-01 12:45:39,579 INFO werkzeug MainThread :  * Debugger PIN: 633-197-354
+2023-02-01 12:45:46,957 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/Feb/2023 12:45:46] "GET /create/ HTTP/1.1" 200 -
+2023-02-01 12:46:31,945 INFO werkzeug Thread-3 : 127.0.0.1 - - [01/Feb/2023 12:46:31] "[35m[1mPOST /create/ HTTP/1.1[0m" 500 -
+2023-02-01 12:46:32,010 INFO werkzeug Thread-4 : 127.0.0.1 - - [01/Feb/2023 12:46:32] "[36mGET /create/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-02-01 12:46:32,013 INFO werkzeug Thread-5 : 127.0.0.1 - - [01/Feb/2023 12:46:32] "[36mGET /create/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-02-01 12:46:32,024 INFO werkzeug Thread-6 : 127.0.0.1 - - [01/Feb/2023 12:46:32] "[36mGET /create/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-02-01 12:46:32,034 INFO werkzeug Thread-7 : 127.0.0.1 - - [01/Feb/2023 12:46:32] "[36mGET /create/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-02-01 12:48:50,098 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-01 12:48:50,098 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-01 12:48:50,099 INFO werkzeug MainThread :  * Restarting with stat
+2023-02-01 12:48:50,309 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-01 12:48:50,313 INFO werkzeug MainThread :  * Debugger PIN: 633-197-354
+2023-02-01 12:48:56,494 INFO petshop_classingletonmain Thread-2 : Showing Owner Records
+2023-02-01 12:48:56,517 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/Feb/2023 12:48:56] "GET / HTTP/1.1" 200 -
+2023-02-01 12:49:00,933 INFO werkzeug Thread-3 : 127.0.0.1 - - [01/Feb/2023 12:49:00] "GET /create/ HTTP/1.1" 200 -
+2023-02-01 12:49:05,159 INFO petshop_classingletonmain Thread-4 : New Record Added!
+2023-02-01 12:49:05,160 INFO werkzeug Thread-4 : 127.0.0.1 - - [01/Feb/2023 12:49:05] "[32mPOST /create/ HTTP/1.1[0m" 302 -
+2023-02-01 12:49:05,165 INFO petshop_classingletonmain Thread-5 : Showing Owner Records
+2023-02-01 12:49:05,167 INFO werkzeug Thread-5 : 127.0.0.1 - - [01/Feb/2023 12:49:05] "GET / HTTP/1.1" 200 -
+2023-02-01 12:49:11,804 INFO werkzeug Thread-6 : 127.0.0.1 - - [01/Feb/2023 12:49:11] "GET /create/ HTTP/1.1" 200 -
+2023-02-01 12:49:17,544 INFO petshop_classingletonmain Thread-7 : New Record Added!
+2023-02-01 12:49:17,547 INFO werkzeug Thread-7 : 127.0.0.1 - - [01/Feb/2023 12:49:17] "[32mPOST /create/ HTTP/1.1[0m" 302 -
+2023-02-01 12:49:17,550 INFO petshop_classingletonmain Thread-8 : Showing Owner Records
+2023-02-01 12:49:17,552 INFO werkzeug Thread-8 : 127.0.0.1 - - [01/Feb/2023 12:49:17] "GET / HTTP/1.1" 200 -
+2023-02-01 12:51:28,947 INFO werkzeug MainThread :  * Detected change in '/Users/aryamaanpandey/Training-BMarkets/Flask/pet_shop/petshop_classingletonmain.py', reloading
+2023-02-01 12:51:28,965 INFO werkzeug MainThread :  * Restarting with stat
+2023-02-01 12:51:29,224 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-01 12:51:29,228 INFO werkzeug MainThread :  * Debugger PIN: 633-197-354
+2023-02-01 12:51:43,036 INFO werkzeug MainThread :  * Detected change in '/Users/aryamaanpandey/Training-BMarkets/Flask/pet_shop/petshop_classingletonmain.py', reloading
+2023-02-01 12:51:43,052 INFO werkzeug MainThread :  * Restarting with stat
+2023-02-01 12:51:43,281 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-01 12:51:43,284 INFO werkzeug MainThread :  * Debugger PIN: 633-197-354
+2023-02-01 12:51:52,060 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-01 12:51:52,060 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-02-01 12:51:52,061 INFO werkzeug MainThread :  * Restarting with stat
+2023-02-01 12:51:52,249 WARNING werkzeug MainThread :  * Debugger is active!
+2023-02-01 12:51:52,253 INFO werkzeug MainThread :  * Debugger PIN: 633-197-354
+2023-02-01 12:52:20,125 INFO petshop_classingletonmain Thread-2 : Showing Owner Records
+2023-02-01 12:52:20,140 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/Feb/2023 12:52:20] "GET / HTTP/1.1" 200 -
+2023-02-01 12:52:52,099 INFO werkzeug Thread-3 : 127.0.0.1 - - [01/Feb/2023 12:52:52] "GET /edit/2 HTTP/1.1" 200 -
+2023-02-01 12:53:33,917 INFO petshop_classingletonmain Thread-4 : Updating Owner Records
+2023-02-01 12:53:33,918 INFO werkzeug Thread-4 : 127.0.0.1 - - [01/Feb/2023 12:53:33] "[32mPOST /edit/2 HTTP/1.1[0m" 302 -
+2023-02-01 12:53:33,923 INFO petshop_classingletonmain Thread-5 : Showing Owner Records
+2023-02-01 12:53:33,931 INFO werkzeug Thread-5 : 127.0.0.1 - - [01/Feb/2023 12:53:33] "GET / HTTP/1.1" 200 -
+2023-02-01 12:53:45,332 INFO petshop_classingletonmain Thread-6 : Showing Owner Records
+2023-02-01 12:53:45,334 INFO werkzeug Thread-6 : 127.0.0.1 - - [01/Feb/2023 12:53:45] "GET / HTTP/1.1" 200 -
+2023-02-01 12:53:45,888 INFO petshop_classingletonmain Thread-7 : Showing Owner Records
+2023-02-01 12:53:45,891 INFO werkzeug Thread-7 : 127.0.0.1 - - [01/Feb/2023 12:53:45] "GET / HTTP/1.1" 200 -
+2023-02-01 12:53:46,152 INFO petshop_classingletonmain Thread-8 : Showing Owner Records
+2023-02-01 12:53:46,155 INFO werkzeug Thread-8 : 127.0.0.1 - - [01/Feb/2023 12:53:46] "GET / HTTP/1.1" 200 -
+2023-02-01 12:54:00,540 INFO werkzeug Thread-9 : 127.0.0.1 - - [01/Feb/2023 12:54:00] "GET /edit/3 HTTP/1.1" 200 -
+2023-02-01 12:54:10,606 INFO petshop_classingletonmain Thread-10 : Updating Owner Records
+2023-02-01 12:54:10,607 INFO werkzeug Thread-10 : 127.0.0.1 - - [01/Feb/2023 12:54:10] "[32mPOST /edit/3 HTTP/1.1[0m" 302 -
+2023-02-01 12:54:10,612 INFO petshop_classingletonmain Thread-11 : Showing Owner Records
+2023-02-01 12:54:10,614 INFO werkzeug Thread-11 : 127.0.0.1 - - [01/Feb/2023 12:54:10] "GET / HTTP/1.1" 200 -

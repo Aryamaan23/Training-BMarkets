@@ -6,6 +6,11 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,BooleanField,SelectField,DateTimeField,TextAreaField,SubmitField,RadioField
 from wtforms.validators import InputRequired, Length
 from petshiosingletonnew import DBConnection
+import logging
+
+
+
+
 
 class EditForm(FlaskForm):
     name=StringField("What is the owner name? ")
@@ -16,6 +21,9 @@ class EditForm(FlaskForm):
 
 app = Flask(__name__)
 app.config['SECRET_KEY']='mysecretkey'
+logging.basicConfig(filename='demo.log',
+level=logging.DEBUG,
+format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
 
 def get_db_connection():
@@ -33,11 +41,12 @@ try:
     db.create_table('OwnerSingleton','name','pet_name','pet_type')
 except Exception as e: 
     pass
-#db=DBConnectionSingleton('OwnerSingleton',"Name","Pet_Name","Pet_Type")
+
 
 @app.route('/')
 def index():
     #owner2=db.create_table('ownerpet23','owner_name','pet_name','pet_breed')
+    app.logger.info('Showing Owner Records')
     owner_details=db.select_result('OwnerSingleton')
     #cur.execute('SELECT * FROM owner;')
     #owner_details = cur.fetchall()
@@ -74,6 +83,7 @@ def create():
 
         db.insert_db('OwnerSingleton',name,pet_name,pet_type)
         #It's important otherwise you won't be able to see the changes!
+        app.logger.info('New Record Added!')
         return redirect(url_for('index'))
     return render_template('petshopcreate.html')
     """
@@ -90,6 +100,7 @@ def delete(ids):
     curr = conn.cursor()
     t = (ids,)
     db.delete_row('OwnerSingleton',t)
+    app.logger.info('Deleting Owner Records')
     #curr.execute('DELETE FROM owner WHERE oid = %s', (ids,))
     #conn.commit()
     #curr.close()
@@ -107,6 +118,7 @@ def edit(ids):
         pet_type=form.pet_type.data
     if request.method=="POST":
         db.update('OwnerSingleton',name,pet_name,pet_type,ids)
+        app.logger.info('Updating Owner Records')
         return redirect(url_for('index'))
     return render_template('editpetshop.html',form=form)
 
@@ -118,4 +130,4 @@ def error():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=5000)
