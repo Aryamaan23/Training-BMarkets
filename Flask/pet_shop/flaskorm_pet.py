@@ -33,4 +33,4 @@ toy2 =  Toy('Ball', dog1.id)
 
 db.session.add_all([owner1,toy1,toy2])
 db.session.commit()
-print(dog1.represent_toys())
+dog1.represent_toys()

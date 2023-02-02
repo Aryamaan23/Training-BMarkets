@@ -54,6 +54,8 @@ class Pet(db.Model):
         for toy in self.toys:
             print(toy.item_name)
     
+
+    
 class Toy(db.Model):
     __tablename__ = 'toys'
     id = db.Column(db.Integer, primary_key=True)
