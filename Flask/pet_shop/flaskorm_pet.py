@@ -1,3 +1,4 @@
+"""
 from flaskorm import Pet,db
 #Create table
 db.create_all()
@@ -12,3 +13,24 @@ print(hm)
 print(hm.pet_id)
 print(rs)
 print(rs.pet_id)
+"""
+
+from flaskorm import db,Pet,Toy,Owner
+
+db.create_all()
+dog1 = Pet('Jimmy')
+dog2 = Pet('Leo')
+
+db.session.add_all([dog1,dog2])
+db.session.commit()
+print(Pet.query.all())
+print(dog1.id,dog1.name)
+
+owner1 = Owner('Kapil',dog1.id)
+
+toy1 =  Toy("chew Toy", dog1.id)
+toy2 =  Toy('Ball', dog1.id)
+
+db.session.add_all([owner1,toy1,toy2])
+db.session.commit()
+print(dog1.represent_toys())

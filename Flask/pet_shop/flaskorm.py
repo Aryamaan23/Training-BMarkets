@@ -1,31 +1,50 @@
 import os
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-import requests
-from flask import Flask, render_template,request,redirect,url_for
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] =\
-        'sqlite:///' + os.path.join(basedir, 'database2.db')
+        'sqlite:///' + os.path.join(basedir, 'database.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 app.app_context().push()
 Migrate(app,db)
+primary_key = True
 
+#making pet model
+'''
 class Pet(db.Model):
-    _tablename_ = 'pet'
+    _tablename_ = 'pets'
+    pet_id    = db.Column(db.Integer, primary_key = True)
+    pet_breed = db.Column(db.Text)
+    pet_name  = db.Column(db.Text)
+    pet_owner = db.Column(db.Text)
+    pet_age   = db.Column(db.Integer)
+
+    def _init_(self,breed,name,owner,age):
+        self.pet_breed = breed
+        self.pet_name = name
+[10:06, 02/02/2023] Akshit Khamesra: self.pet_owner = owner
+        self.pet_age = age
+    def _repr_(self):
+        return f"{self.pet_name} is of {self.pet_breed} breed and it's age is {self.pet_age} year old and its owner name is {self.pet_owner}"
+    '''
+#RELATION
+class Pet(db.Model):
+    __tablename__ = 'pet'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
-    lname=db.Column(db.Text)
     toys = db.relationship('Toy',backref = 'pet', lazy = 'dynamic')
     owner = db.relationship('Owner',backref = 'pet',uselist = False)
 
-    def _init_(self,name):
+    def __init__(self,name):
         self.name = name
-    def _repr_(self):
+
+    def __repr__(self):
         if self.owner:
             return f"Pet's name is {self.name} and owner is {self.owner.name}"
         else:
@@ -34,28 +53,32 @@ class Pet(db.Model):
         print("These are my toys: ")
         for toy in self.toys:
             print(toy.item_name)
+    
+class Toy(db.Model):
+    __tablename__ = 'toys'
+    id = db.Column(db.Integer, primary_key=True)
+    item_name = db.Column(db.Text)
+    pet_id = db.Column(db.Integer, db.ForeignKey('pet.id'))
 
+    def __init__(self,item_name, pet_id):
+        self.item_name = item_name
+        self.pet_id = pet_id
+    
+    def __repr__(self):
+        return f"These are my toys :{self.item_name}"
 
 class Owner(db.Model):
-    _tablename_ = 'owners'
+    __tablename__ = 'owners'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
     pet_id = db.Column(db.Integer, db.ForeignKey('pet.id'))
     
-    def _init_(self,name,pet_id):
+    def __init__(self,name,pet_id):
         self.name= name
         self.pet_id = pet_id
 
-
-class Toy(db.Model):
-    __tablename__='toys'
-    id=db.Column(db.Integer,primary_key=True)
-    item_name=db.Column(db.Text)
-    pet_id=db.Column(db.Integer,db.ForeignKey('pet.id'))
-
-    def __init__(self,item_name,pet_id):
-        self.item_name=item_name
-        self.pet_id=pet_id
+if __name__ == '__main__':
+    app.run(debug=True)
 
 """
 class Pet(db.Model):
