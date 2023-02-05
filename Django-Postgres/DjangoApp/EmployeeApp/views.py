@@ -29,6 +29,7 @@ def departmentApi(request,id=0):
             departments_serializer.save()
             return JsonResponse("Updated Successfully",safe=False)
         return JsonResponse("Failed to Add",safe=False)
+    
 
 
 
